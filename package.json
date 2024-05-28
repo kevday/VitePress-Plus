@@ -1,0 +1,45 @@
+{
+  "name": "@kevday/vitepress-plus",
+  "version": "0.9.2",
+  "description": "Vitepress Plus, UnoCSS, Anu, Blog",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "Vitepress",
+    "Starter",
+    "UnoCSS",
+    "Anu"
+  ],
+  "type": "module",
+  "author": "Tom Lamers",
+  "devDependencies": {
+    "@antfu/eslint-config": "2.12.1",
+    "@anu-vue/preset-theme-default": "^0.15.2",
+    "@iconify-json/bx": "^1.1.10",
+    "@iconify-json/fluent-emoji": "^1.1.18",
+    "@iconify-json/heroicons-outline": "^1.1.10",
+    "@iconify-json/logos": "^1.1.42",
+    "@types/node": "^20.12.12",
+    "@unocss/preset-icons": "0.60.3",
+    "@unocss/preset-uno": "0.60.3",
+    "@vueuse/core": "^10.10.0",
+    "anu-vue": "^0.15.2",
+    "date-fns": "^3.6.0",
+    "eslint": "^8.57.0",
+    "fs-extra": "^11.2.0",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0",
+    "typescript": "^5.4.5",
+    "unocss": "0.59.0-beta.1",
+    "vitepress": "1.2.2",
+    "vue": "^3.4.27"
+  }
+}
