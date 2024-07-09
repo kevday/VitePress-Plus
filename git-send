@@ -1,20 +1,5 @@
 #!/bin/sh
 
-# Termina o script se ocorrer qualquer erro
-set -e
-
-# Define variáveis
-BRANCH="main"
-REPO="origin"
-DATAHORA=$(date +'%Y-%m-%d %H:%M:%S')
-COMMIT_MSG="Auto commit em $DATAHORA"
-
-# Verifica se o diretório atual é um repositório Git
-if [ ! -d .git ]; then
-  echo "Este diretório não é um repositório Git. Saindo do script."
-  exit 1
-fi
-
 # Adiciona todos os arquivos modificados ao commit
 git add .
 
@@ -24,14 +9,23 @@ if git diff-index --cached --quiet HEAD --; then
   exit 0
 fi
 
+# Obtém a data e hora atual
+datahora=$(date +'%Y-%m-%d %H:%M:%S')
+
 # Realiza o commit com a mensagem contendo a data e hora
-if ! git commit -m "$COMMIT_MSG"; then
+git commit -am "Auto commit em $datahora"
+
+# Verifica se o commit foi realizado com sucesso
+if [ $? -ne 0 ]; then
   echo "Erro ao realizar o commit. Saindo do script."
   exit 1
 fi
 
 # Realiza o push forçado para o repositório remoto
-if ! git push -f $REPO $BRANCH; then
+git push -f
+
+# Verifica se o push foi realizado com sucesso
+if [ $? -ne 0 ]; then
   echo "Erro ao realizar o push. Saindo do script."
   exit 1
 fi

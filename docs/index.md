@@ -1,27 +1,36 @@
 ---
+# https://kevin.net.br
+
 layout: home
 
+title: VitePress Plus
+titleTemplate: Kevin
+
 hero:
-  name: VitePress
-  text: Starter Template
-  tagline: Blog included. Built on top of UnoCSS and Anu.
+  name: kevin.net.br
+  /*text: kevin.net.br*/
+  tagline: O quão complexo é manter o simples?
+  image:
+    src: /img/logo.png
+    alt: Kevin
   actions:
     - theme: brand
-      text: Guide
-      link: /guide/
+      text: Sobre mim
+      link: /about
     - theme: alt
-      text: Configs
-      link: /config/
-    - theme: alt
-      text: Blog Demo
-      link: /blog/
+      text: Meu GitHub
+      link: https://github.com/kevday/
 
 features:
-- title: "VitePress: Designed to be simplicity first"
-  details: With Markdown-centered content, it's built to help you focus on writing and deployed with minimum configuration.
-- title: "UnoCSS: The instant on-demand Atomic CSS engine"
-  details: UnoCSS is an atomic-CSS engine instead of a framework. Everything is designed with flexibility and performance in mind.
-- title: "Blog Demo included"
-  details: Posts and Authors as sample predefinded. Composables for accessing data included.
----
+    - icon: 🧾
+      title: Blog
+      details: Sistema de blog ativo com tags e lista cronológica
 
+    - icon: 🔐
+      title: Postagem com senha
+      details: Sistema de postagem com senha
+
+    - icon: 🔗
+      title: Simplificação do css 
+      details: Inclusão de cores .
+---
